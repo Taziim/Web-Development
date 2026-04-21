@@ -1,0 +1,32 @@
+✅Install React using Vite 
+-npm create vite@latest
+-cd project-name
+-npm install
+✅ FINAL COMBINED NOTES (Clean + Exam Ready)
+🚀React Setup using Vite
+React project can be created using Vite for faster development.
+Steps:
+Create project using Vite command
+Go to project folder
+Install dependencies
+Run development server using npm run dev
+🧩What is a Component?
+A component is a reusable piece of UI in React.
+Each component has its own logic, structure, and appearance.
+Components can be as small as a button or as large as a full page.
+Components are mainly created using functions (modern approach) and also classes (older method).
+Component names must always start with a capital letter.
+Components improve reusability, readability, and maintainability of code.
+🔄What is Props?
+Props (properties) are used to pass data from parent component to child component.
+Props allow components to be dynamic and reusable.
+A parent component can pass multiple props to a child component.
+Props can pass different data types like:
+String
+Number
+Boolean
+Array
+Object
+Props are read-only, meaning child components cannot modify them.
+Data flow in React is one-way (top to bottom): parent → child.
+
