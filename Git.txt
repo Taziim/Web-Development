@@ -1,0 +1,79 @@
+# -------- Version Check --------
+git --version          # Check git version
+# or
+git -v                 # Short version check
+
+# -------- Create Directory --------
+mkdir project-name     # Make a new directory
+cd project-name        # Move into the directory
+
+# -------- Initialization --------
+git init               # Initialize git in the current directory
+
+# -------- Check Status --------
+git status             # Provide information about the current directory state
+
+# -------- Stage Files --------
+git add .              # Track all untracked files (staging area)
+
+# -------- Commit Files --------
+git commit -m "Message"  # Commit the staged files
+
+# -------- Clone Repo to Local (Alternative) --------
+git clone <repo-url>   # Clone remote repository to local machine
+
+# -------- Local to Remote Integration --------
+git remote add origin <repo-url>   # Connect local repo to remote
+git remote -v                       # Verify remote connection
+
+# -------- Push & Pull --------
+git push -u origin main   # Push local commits to remote repository
+git pull origin main      # Fetch and merge latest changes from GitHub
+git push --force          #To push forcefully to the remote 
+
+# -------- Logs & History --------
+git log                  # Show previous commits
+git log --oneline        # Show commits in short format
+
+# -------- View Specific Commit --------
+git show <commitID>      # Show changes of a specific commit
+
+# -------- Git Branch --------
+git branch branchName       # Create a new branch
+git branch -a               # List all branches (local + remote)
+git checkout branchName     # Switch to another branch
+git branch -d branchName       # Delete a local branch safely
+                               # Only deletes if branch is fully merged
+git branch -D branchName       # Force delete local branch
+                               # Deletes even if not merged
+git merge branchName           # merge branches
+git fetch origin               # Fetch changes from remote without merging
+git fetch log origin/branch    # See the commit files that are fetched from the remote
+git push -u origin <branch-name>  # Push local branch to GitHub and set upstream
+git push origin --delete master   # delete GitHub branch 
+git checkout -b restore-code 4543534 # Creates a new branch: restore-code # Creates a new branch: restore-code # Moves you into that branch immediately
+
+# Alternative (newer & recommended)
+git switch branchName       # Switch branch
+git switch -c branchName    # Create and switch to a new branch
+
+# -------- File Operations --------
+git rm fileName             # Remove file from staging area AND working directory
+git mv oldName newName      # Rename or move a file
+
+# -------- File Operations --------
+git diff                 # show upstaged changes
+git diff --cached        # show staged changes
+git revert HEAD          # revert the last commit (keeps history)
+git reset --hard <commit-id>   # reset to a commit (removes history and delete the file from git)
+git restore --staged <file>    # unstage a file
+git rebase -i --root           #Delete a specific commit using vim
+
+# -------- SSh Login --------
+.git/config                 # show the configurations
+ssh-keygen                  #generate ssh key
+
+# -------- Git FORK --------
+# A fork is a copy of someone else’s repository into your own account.
+
+

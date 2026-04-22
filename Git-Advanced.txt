@@ -1,0 +1,71 @@
+# Git Configuration, Restore, and Rebase Notes (Corrected & Improved)
+## 1. Git Username and Email Configuration
+Git requires a username and email to associate commits with an identity.
+### Types of Configuration
+* **Global configuration**: Applies to all repositories on your system.
+* **Local configuration**: Applies only to the current repository.
+### Check Configuration
+* View global configuration: git config --global --list
+* View local configuration: git config --local --list
+### Set Configuration
+* Set global username: git config --global user.name "your_name"
+* Set global email: git config --global user.email "your_email"
+* Set local username: git config --local user.name "your_name"
+* Set local email: git config --local user.email "your_email"
+### Remove Configuration
+* Remove global username: git config --global --unset user.name
+* Remove global email: git config --global --unset user.email
+* Remove local username: git config --local --unset user.name
+* Remove local email: git config --local --unset user.email
+### Important Notes
+* Local configuration overrides global configuration.
+* Always verify settings before making commits in a new repository.
+## 2. Git Restore
+Git restore is used to discard changes in working directory or staging area.
+### Key Uses
+* Discard changes in working directory (unstaged files).
+* Unstage files from staging area.
+### Concepts
+* Working Directory: where you edit files
+* Staging Area (Index): where changes are prepared for commit
+### Common Scenarios
+* Discard changes in a file (working directory)
+* Remove file from staging area (unstage)
+### Important Notes
+* restore only affects local changes, not committed history
+* be careful, as changes may be lost permanently
+## 3. Git Rebase
+Git rebase is used to modify commit history and create a cleaner project history.
+### Interactive Rebase
+* Used to edit, squash, reorder, or remove commits
+* Allows rewriting commit history
+### Common Use Cases
+* Change commit messages
+* Combine multiple commits into one
+* Remove unwanted commits
+### Important Commands Conceptually
+* Rebase starting point (e.g., last N commits)
+* Interactive mode allows editing commit list
+### Rebase Options
+* pick: keep commit as it is
+* reword: change commit message
+* edit: modify commit content
+* squash: combine commits
+* drop: remove commit
+### Reflog
+* Used to view history of HEAD changes
+* Helps recover commits after rebase or reset
+### Amend Last Commit
+* Used to modify the most recent commit
+### What can be changed
+* Commit message
+* Added or removed files from last commit
+### Git Reset (Important for comparison with restore)
+* Used to move HEAD and modify commit history
+* Has different modes (soft, mixed, hard)
+### Difference: Restore vs Reset
+* restore → deals with files (working directory/staging)
+* reset → deals with commit history
+### Git Stash
+* Temporarily saves uncommitted changes
+* Useful when switching branches
